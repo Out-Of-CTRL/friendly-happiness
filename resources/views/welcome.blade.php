@@ -72,11 +72,11 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Note</a>
-                    <a href="https://laracasts.com">Cursuri</a>
-                    <a href="https://laravel-news.com">Stiri</a>
+                    <a href="home">Note</a>
+                    <a href="home">Cursuri</a>
+                    <a href="home">Stiri</a>
                     |
-                    <a href="https://forge.laravel.com">Login</a>
+                    <a href="home">Login</a>
                 </div>
             </div>
         </div>
