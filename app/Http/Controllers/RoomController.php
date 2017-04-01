@@ -33,9 +33,14 @@ class RoomController extends Controller
 
         $group->save();
 
-        return redirect()->route('home');
+        return redirect()->route('felicitari');
     }
     public function create()
+    {
+        return view('room_create');
+    }
+
+    public function index()
     {
         return view('room_create');
     }

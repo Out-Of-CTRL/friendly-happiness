@@ -51,6 +51,12 @@ class EventController extends Controller
 
         return redirect()->route('home');
     }
+
+    public function index()
+    {
+        return view('event_create');
+    }
+
     public function create()
     {
         return view('event_create');
