@@ -23,7 +23,10 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        // Validate the request...
+        $this->validate($request, [
+            'materie' => 'required',
+            'user_id' => 'required|numeric',
+        ]);
 
         $group = new \App\Course;
 

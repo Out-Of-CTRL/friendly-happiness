@@ -15,6 +15,12 @@
 
                             <div class="col-md-6">
                                 <input id="nume" type="nume" class="form-control" name="nume" value="{{ old('nume') }}" required autofocus>
+
+                                @if ($errors->has('nume'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('nume') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 

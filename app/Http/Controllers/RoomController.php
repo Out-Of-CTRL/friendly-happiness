@@ -23,7 +23,9 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        // Validate the request...
+        $this->validate($request, [
+            'nume' => 'required|unique:rooms',
+        ]);
 
         $group = new \App\Room;
 

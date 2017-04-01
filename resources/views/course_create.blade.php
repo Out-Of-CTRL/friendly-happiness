@@ -15,6 +15,12 @@
 
                             <div class="col-md-6">
                                 <input id="materie" type="materie" class="form-control" name="materie" value="{{ old('materie') }}" required autofocus>
+
+                                @if ($errors->has('materie'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('materie') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 
@@ -23,6 +29,12 @@
 
                             <div class="col-md-6">
                                 <input id="user_id" type="user_id" class="form-control" name="user_id" required>
+
+                                @if ($errors->has('user_id'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('user_id') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 
