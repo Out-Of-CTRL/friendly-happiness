@@ -23,6 +23,13 @@ Route::get('/test', function () {
     return view('relationTest', ['users' => App\User::all()]);
 });
 
+Route::get('/profil', function () {
+    return view('profil');
+});
+
+Route::get('/orar', function () {
+    return view('orar');
+});
 
 Route::resource('group', 'GroupController');
 
