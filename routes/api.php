@@ -28,3 +28,7 @@ Route::middleware('auth:api')->get('/course', function (Request $request) {
 Route::middleware('auth:api')->get('/room', function (Request $request) {
     return $request->room();
 });
+
+Route::middleware('auth:api')->get('/event', function (Request $request) {
+    return $request->event();
+});
