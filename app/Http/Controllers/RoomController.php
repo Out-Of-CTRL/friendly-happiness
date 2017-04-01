@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CourseController extends Controller
+class RoomController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -25,7 +25,7 @@ class CourseController extends Controller
     {
         // Validate the request...
 
-        $group = new \App\Course;
+        $group = new \App\Room;
 
         $group->nume = $request->nume;
 
@@ -35,7 +35,7 @@ class CourseController extends Controller
     }
     public function create()
     {
-        return view('create_room');
+        return view('room_create');
     }
 
 }

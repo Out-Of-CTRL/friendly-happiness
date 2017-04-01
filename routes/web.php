@@ -23,6 +23,8 @@ Route::resource('group', 'GroupController');
 
 Route::resource('course', 'CourseController');
 
+Route::resource('room', 'RoomController');
+
 Auth::routes();
 
 Route::get('home', 'HomeController@index')->name('home');
