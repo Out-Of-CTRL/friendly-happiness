@@ -12,6 +12,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
+            'id' => '1',
         	'matricol' => 'asd',
         	'email' => 'test@test.com',
         	'password' => bcrypt('testtest'),
@@ -19,6 +20,16 @@ class UsersTableSeeder extends Seeder
         	'prenume' => 'zxc',
         	'tata' => 'a',
         	'mama' => 'b',
+        ]);
+        DB::table('users')->insert([
+            'id' => '2',
+            'matricol' => 'asd2',
+            'email' => 'test@test.test',
+            'password' => bcrypt('testtest'),
+            'nume' => 'test1',
+            'prenume' => 'testp',
+            'tata' => 'a',
+            'mama' => 'b',
         ]);
     }
 }
