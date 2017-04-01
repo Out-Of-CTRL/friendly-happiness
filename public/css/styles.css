@@ -4,10 +4,35 @@
 	text-align: center;
 	font-family: 'Raleway', sans-serif;
 }
-
+tr.hover
+{
+	background-color: black;
+	opacity: 0.9;
+}
 body
 {
 	transition: background-color .5s;
 	font-family: 'Raleway', sans-serif;
-	color : #636b6f;
+	color: #636b6f;
+}
+.set_margin
+{
+	margin: 20px; 
+}
+.black_theme
+{
+	background-color: black;
+	color: white;
+	text-align: center ;
+	vertical-align: middle;
+}
+th , td , tr 
+{
+	text-align: center;
+	vertical-align: middle;
+}
+
+.progress, .progress-info
+{
+	height: 20px;
 }

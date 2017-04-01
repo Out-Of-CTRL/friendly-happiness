@@ -1,17 +1,224 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css">
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
-                <div class="panel-body">
-                   Ce faci domnule {{ Auth::user()->nume }} ? <br> Bine boss!
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"> 
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="sidenavLeft.css">
+    <link rel="stylesheet" type="text/css" href="sidenavRight.css">
+</head>
+<body onLoad = "getGreeting();">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">FiiBook</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="orar.html">Orar <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Noutăți</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->prenume }}<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="profil.html">Profilul meu</a></li>
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </nav>
+        <br><br>
+        
+<div class="container">
+    <div class="row set_margin">
+        <div class="col-sm-2">
+            <!-- Camp gol , nu baga nimic !-->
+        </div>
+        <div class="col-sm-8 ">
+                <h1 id="GRT" style = "text-align:center;"></h1>
+                <script>
+                    function getGreeting(){
+                        var time = new Date().getHours();
+                        var greeting;
+                        if (time < 10) {
+                            greeting = "Bună dimineața!";
+                        } 
+                        else if (time < 20){
+                            greeting = "Să aveți o zi minunată!";
+                        } 
+                        else{
+                            greeting = "Bună seara!";
+                        }
+                        document.getElementById("GRT").innerHTML = greeting;
+                    }
+                </script>
+        </div>
+        <div class="col-sm-2">
+            <!-- Camp gol , nu baga nimic !-->
         </div>
     </div>
+    <div class="row set_margin">
+        <div class="col-sm-6 "  >
+            <table class="table table-striped table-hover" >
+            <h1 style="text-align: center;">Orarul pe ziua de azi </h1>
+              <thead class="black_theme">
+                <tr>
+                  <th>#</th>
+                  <th>Materie</th>
+                  <th>Oră</th>
+                  <th>Sala</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Sisteme de operare</td>
+                  <td>18:00</td>
+                  <td>C112</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+        </tbody>
+        </table>
+        </div>
+        <div class="col-sm-6 " >    
+            <table class="table table-striped table-hover table-bordered" >
+                <h1 style="text-align: center;">Ultimele tale note </h1>
+                <br>
+              <thead class="black_theme">
+                <tr>
+                  <th>#</th>
+                  <th>Materie</th>
+                  <th>Notă</th>
+                  <th>Data</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+              </tbody>
+            </table> 
+        </div>
+    </div>
+    <div class="row set_margin">
+        <div class="col-sm-6 " >
+                <img src="stagii.png" style="width: 100%" class="img-responsive margin">
+                <h2>
+                Stagii pe bune 2017 !
+                </h2>
+                <blockquote>
+                  <p>Programul Stagii pe Bune propune plasarea studenţilor din facultăţile cu profil IT&C în stagii de practică, desfăşurate pe durata verii, în companiile din domeniul IT&C din România.<br>
+                    Fă-ți cont pe Junio și aplică la diferite stagii :
+                    <a href="https://junio.ro">https://junio.ro</a></p>
+                </blockquote>
+        </div>
+        <div class="col-sm-6 ">
+                <h2>
+                FII Practic organizeaza Hackathon !
+                </h2>
+                <blockquote>
+                  <p>FII Practic Hackathon se află la a treia ediţie, se va desfășura pe parcursul a 24 de ore, în data de 1 aprilie 2017, unde participanții vor putea lucra în echipe, pentru a realiza aplicații care să rezolve o nevoie sau o problemă a comunității. 
+                    Echipele vor avea între 2 și 4 membri. Vor fi maxim 10 echipe participante, așadar contează dacă vă înscrieți cât mai rapid!!
+                    Formular de înscriere:
+                    <a href="http://tinyurl.com/fiipractichackathon">http://tinyurl.com/fiipractichackathon</a></p>
+                </blockquote>
+                <img src="hackathon.jpg" style="width: 100%" class="img-responsive margin">
+        </div>
+    </div>
+    <div class="row set_margin">
+        <div class="col-sm-12 set_margin">
+                <h2>
+                FII CODE ediția a II-a !
+                </h2>
+                <blockquote>
+                  <p>Se zvonește că în regatul Iașului, în lunile Martie, Aprilie și Mai, o mare competiție de algoritmică și de devoltarea aplicatiilor web și mobile urmează să înceapă. În Facultatea de Informatică Iași încep să se strângă fel de fel de probleme, grele și ușoare, dar pline de capcane și provocări. Totodată, undeva în clădire se caută în secret teme îndrăznețe pentru toți pasionații de web și mobile prin care aceștia să etaleze tehnologiile stăpânite precum și creativitatea cu care se mândresc.
+                    <br>
+                    Toți programatorii, cu mic cu mare sunt așteptați să își încerce forțele cot la cot cu iscusiți cunoscători de limbaje și tehnologii din regat. Vă invităm să vă pregătiți IDE-urile cele mai rapide, mouse-urile cu DPI-ul cel mai bun iar laptopurile să vă fie încărcate pentru a fi gata pe poziții pentru rundele online și pentru a câștiga un bilet spre finala din Iași!
+                    Nu rata șansa să fii printre cei mai buni!
+                    <br>
+                    Pentru a putea urmări indeaproape parcursul nostru și a fi la curent cu noile suprize nu uitați să urmăriți pagina noastră precum și site-ul :
+                    <a href="www.fiicode.com">www.fiicode.com</a></p>
+                </blockquote>
+                <img src="fiicode.jpeg" style="width: 100%" class="img-responsive margin">
+        </div>
+    </div>
+    </div>
 </div>
-@endsection
+</div>
+
+</body>
+</html>

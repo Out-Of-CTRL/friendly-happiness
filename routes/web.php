@@ -19,6 +19,11 @@ Route::get('/template', function () {
     return view('template');
 });
 
+Route::get('/test', function () {
+    return view('relationTest', ['users' => App\User::all()]);
+});
+
+
 Route::resource('group', 'GroupController');
 
 Route::resource('course', 'CourseController');
