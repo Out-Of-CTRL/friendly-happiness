@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'matricol', 'email', 'password', 'nume', 'prenume', 'date_of_birth', 'mama', 'tata',
     ];
 
     /**
@@ -27,5 +27,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
     
-    protected $primaryKey = 'matricol';
+    protected $attributes = [
+        'mama' => '',
+        'tata' => '',
+        'date_of_birth' => NULL,
+    ];
 }
