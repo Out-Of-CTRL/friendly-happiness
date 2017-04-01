@@ -1,0 +1,13 @@
+
+.navbar a
+{
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+}
+
+body
+{
+	transition: background-color .5s;
+	font-family: 'Raleway', sans-serif;
+	color : #636b6f;
+}
