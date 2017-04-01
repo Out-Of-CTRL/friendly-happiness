@@ -8,7 +8,7 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    {{ Auth::user()->nume }}
+                   Ce faci domnule {{ Auth::user()->nume }} ? <br> Bine boss!
                 </div>
             </div>
         </div>

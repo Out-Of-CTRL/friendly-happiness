@@ -16,3 +16,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::middleware('auth:api')->get('/group', function (Request $request) {
+    return $request->group();
+});
+
+Route::middleware('auth:api')->get('/course', function (Request $request) {
+    return $request->course();
+});

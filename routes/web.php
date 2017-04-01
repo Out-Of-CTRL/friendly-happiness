@@ -15,9 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('template', function () {
+Route::get('/template', function () {
     return view('template');
 });
+
+Route::resource('group', 'GroupController');
+
+Route::resource('course', 'CourseController');
 
 Auth::routes();
 
