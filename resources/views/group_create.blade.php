@@ -14,15 +14,27 @@
                             <label for="nume" class="col-md-4 control-label">Nume</label>
 
                             <div class="col-md-6">
-                                <input id="nume" type="nume" class="form-control" name="nume" value="{{ old('nume') }}" required autofocus>
+                                <input id="nume" class="form-control" name="nume" value="{{ old('nume') }}" required autofocus>
+
+                                @if ($errors->has('nume'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('nume') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 
                         <div class="form-group{{ $errors->has('sef') ? ' has-error' : '' }}">
-                            <label for="sef" class="col-md-4 control-label">Șef</label>
+                            <label for="sef" class="col-md-4 control-label">ID Șef</label>
 
                             <div class="col-md-6">
-                                <input id="sef" type="sef" class="form-control" name="sef" required>
+                                <input id="sef" class="form-control" name="sef" required>
+
+                                @if ($errors->has('sef'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('sef') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 

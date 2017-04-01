@@ -23,7 +23,10 @@ class GroupController extends Controller
      */
     public function store(Request $request)
     {
-        // Validate the request...
+        $this->validate($request, [
+            'nume' => 'required|unique:groups',
+            'sef' => 'required|numeric',
+        ]);
 
         $group = new \App\Group;
 
