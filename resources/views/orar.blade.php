@@ -30,15 +30,25 @@
 
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="orar">Orar <span class="sr-only">(current)</span></a></li>
-						<li><a href="#">Noutăți</a></li>
+						<li><a href="orar">Orar <span class="sr-only">(current)</span></a></li>
+                        <li><a href="/group/create">Creare Grup</a></li>
+                        <li><a href="/course/create">Creare Curs</a></li>
+                        <li><a href="/room/create">Creare Sala</a></li>
+                        <li><a href="/grade/create">Introducere note</a></li>
+                        <li><a href="/event/create">Creare Eveniment</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->prenume }}<span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="profil">Profilul meu</a></li>
-								<li><a href="#">Logout</a></li>
+								<li><a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a><form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form></li>
 							</ul>
 						</li>
 					</ul>
