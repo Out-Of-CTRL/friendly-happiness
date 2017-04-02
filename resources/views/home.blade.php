@@ -1,5 +1,9 @@
+@extends('layouts.app')
+
+@section('content')
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ config('app.locale') }}">
 <head>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css">
@@ -77,6 +81,10 @@
     </div>
     <div class="row set_margin">
         <div class="col-sm-6 "  >
+
+<?php
+$azi = Carbon\Carbon::now()->format('Y-m-d');
+?>
             <table class="table table-striped table-hover" >
             <h1 style="text-align: center;">Orarul pe ziua de azi </h1>
               <thead class="black_theme">
@@ -88,42 +96,23 @@
                 </tr>
               </thead>
               <tbody>
+              @foreach ($events as $event)
+              @if ($event->date === $azi)
                 <tr>
-                  <td>1</td>
-                  <td>Sisteme de operare</td>
-                  <td>18:00</td>
-                  <td>C112</td>
+                  <td>{{ $event->id }}</td>
+                  <td>{{ $event->title }}</td>
+                  <td>{{ $event->hour }}</td>
+                  <td>
+                    @foreach($rooms as $camera)
+                        @if ($camera->id === $event->room_id)
+                            {{ $camera->nume }}
+                        @endif
+                    @endforeach
+                  </td>
                 </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                </tr>
+                @endif
+              @endforeach 
+                
         </tbody>
         </table>
         </div>
@@ -222,3 +211,5 @@
 
 </body>
 </html>
+
+@endsection

@@ -41,6 +41,8 @@ Route::resource('event', 'EventController');
 
 Auth::routes();
 
-Route::get('home', 'HomeController@index')->name('home');
+Route::get('home', function () {
+    return view('home', ['events' => App\Event::all()], ['rooms' => App\Room::all()]);
+}, 'EventController@index', 'RoomController')->name('home');
 
 Route::get('felicitari', 'FelicitariController@index')->name('felicitari');
