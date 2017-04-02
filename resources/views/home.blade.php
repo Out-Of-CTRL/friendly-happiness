@@ -35,7 +35,11 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="orar">Orar <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Noutăți</a></li>
+                        <li><a href="/group/create">Creare Grup</a></li>
+                        <li><a href="/course/create">Creare Curs</a></li>
+                        <li><a href="/room/create">Creare Sala</a></li>
+                        <li><a href="/grade/create">Introducere note</a></li>
+                        <li><a href="/event/create">Creare Eveniment</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
@@ -97,6 +101,7 @@ $azi = Carbon\Carbon::now()->format('Y-m-d');
               </thead>
               <tbody>
               @foreach ($events as $event)
+              @if (strtoupper(Auth::user()->grupa) === strtoupper($event->grupa))
               @if ($event->date === $azi)
                 <tr>
                   <td>{{ $event->id }}</td>
@@ -111,11 +116,15 @@ $azi = Carbon\Carbon::now()->format('Y-m-d');
                   </td>
                 </tr>
                 @endif
+              @endif
               @endforeach 
                 
         </tbody>
         </table>
         </div>
+        <?php
+        $counter=1;
+        ?>
         <div class="col-sm-6 " >    
             <table class="table table-striped table-hover table-bordered" >
                 <h1 style="text-align: center;">Ultimele tale note </h1>
@@ -129,36 +138,28 @@ $azi = Carbon\Carbon::now()->format('Y-m-d');
                 </tr>
               </thead>
               <tbody>
+
+              @foreach ($grades as $nota)
+              @if (Auth::user()->id === $nota->user_id)
+              @if ($counter <= 5)
                 <tr>
-                  <td>1</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
+                  <td><?php echo $counter ?></td>
+                  <td>
+                  @foreach($courses as $curs)
+                  @if($nota->course_id === $curs->id)
+                        {{ $curs->materie }}
+                  @endif
+                  @endforeach
+                  </td>
+                  <td>{{ $nota->val }}</td>
+                  <td>{{ $nota->date }}</td>
                 </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                </tr>
+                <?php
+                $counter++;
+                ?>
+              @endif
+              @endif
+              @endforeach
               </tbody>
             </table> 
         </div>

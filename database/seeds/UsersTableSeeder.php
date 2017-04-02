@@ -20,6 +20,7 @@ class UsersTableSeeder extends Seeder
         	'prenume' => 'zxc',
         	'tata' => 'a',
         	'mama' => 'b',
+            'grupa' => '1',
         ]);
         DB::table('users')->insert([
             'id' => '2',
@@ -30,6 +31,7 @@ class UsersTableSeeder extends Seeder
             'prenume' => 'testp',
             'tata' => 'a',
             'mama' => 'b',
+            'grupa' => '1',
         ]);
     }
 }

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class RoomController extends Controller
+class ModController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,13 +23,13 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'nume' => 'required|unique:rooms',
-        ]);
 
-        $group = new \App\Room;
+        $group = new \App\Mods;
 
-        $group->nume = $request->nume;
+        $group->user_id = $request->user_id;
+
+        $group->grupa = $request->grupa;
+        
 
         $group->save();
 
@@ -37,13 +37,12 @@ class RoomController extends Controller
     }
     public function create()
     {
-        return view('room_create');
+        return view('mod_create');
     }
 
     public function index()
     {
-        
-        return view('room_create');
+        return view('mod_create');
     }
 
 }

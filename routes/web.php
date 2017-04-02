@@ -41,10 +41,14 @@ Route::resource('event', 'EventController');
 
 Route::resource('grade', 'GradeController');
 
+Route::resource('mods', 'ModController');
+
 Auth::routes();
 
 Route::get('home', function () {
-    return view('home', ['events' => App\Event::all()], ['rooms' => App\Room::all()]);
-}, 'EventController@index', 'RoomController')->name('home');
-
+    return view('home',['events' => App\Event::all(),'courses' => App\Course::all(),'grades' => App\Grades::all(), 'rooms' => App\Room::all(), 'mods' => App\Mods::all()]);
+})->name('home');
+Route::get('orar', function () {
+    return view('orar',['events' => App\Event::all(),'courses' => App\Course::all(),'grades' => App\Grades::all(), 'rooms' => App\Room::all(), 'mods' => App\Mods::all()]);
+})->name('orar');
 Route::get('felicitari', 'FelicitariController@index')->name('felicitari');

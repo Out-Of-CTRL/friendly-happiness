@@ -31,5 +31,6 @@ class User extends Authenticatable
         'mama' => '',
         'tata' => '',
         'date_of_birth' => NULL,
+        'grupa' => '',
     ];
 }

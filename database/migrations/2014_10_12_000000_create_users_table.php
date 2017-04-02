@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('prenume');
             $table->string('tata');
             $table->string('mama');
+            $table->string('grupa');
             $table->date('date_of_birth')->nullable();
             $table->rememberToken();
             $table->timestamps();

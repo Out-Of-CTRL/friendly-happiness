@@ -10,15 +10,15 @@
                 <form class="form-horizontal" role="form" method="POST" action="{{ route('room.store') }}">
                         {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('nume') ? ' has-error' : '' }}">
-                            <label for="nume" class="col-md-4 control-label">Nume</label>
+                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <label for="name" class="col-md-4 control-label">Nume</label>
 
                             <div class="col-md-6">
-                                <input id="nume" type="nume" class="form-control" name="nume" value="{{ old('nume') }}" required autofocus>
+                                <input id="name" type="name" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
 
-                                @if ($errors->has('nume'))
+                                @if ($errors->has('name'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('nume') }}</strong>
+                                        <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                 @endif
                             </div>

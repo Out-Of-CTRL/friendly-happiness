@@ -81,51 +81,333 @@
 			    </tr>
 			  </thead>
 			  <tbody>
+
+			  
 			    <tr>
-			      <td>Luni</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
+			    <td>Luni</td>
+			    @foreach ($events as $ora)
+			      
+			    @if($ora->date === '2017-04-03')
+			      <td>
+			      	@if($ora->hour === '08:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			   
+			      <td>
+			      	@if($ora->hour === '10:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '12:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '14:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '16:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '18:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			       @endif
+			      @endforeach
 			    </tr>
+
+
+
+
 			    <tr>
-			      <td>Marți</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
+			    <td>Marti</td>
+			    @foreach ($events as $ora)
+			      
+			    @if($ora->date === '2017-04-04')
+			      <td>
+			      	@if($ora->hour === '08:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			   
+			      <td>
+			      	@if($ora->hour === '10:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '12:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '14:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '16:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '18:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			       @endif
+			      @endforeach
 			    </tr>
+
 			    <tr>
-			      <td>Miercuri</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
+			    <td>Miercuri</td>
+			    @foreach ($events as $ora)
+			      
+			    @if($ora->date === '2017-04-05')
+			      <td>
+			      	@if($ora->hour === '08:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			   
+			      <td>
+			      	@if($ora->hour === '10:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '12:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '14:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '16:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '18:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			       @endif
+			      @endforeach
 			    </tr>
+			    
+
 			    <tr>
-			      <td>Joi</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
+			    <td>Joi</td>
+			    @foreach ($events as $ora)
+			      
+			    @if($ora->date === '2017-04-06')
+			      <td>
+			      	@if($ora->hour === '08:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			   
+			      <td>
+			      	@if($ora->hour === '10:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '12:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '14:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '16:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '18:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			       @endif
+			      @endforeach
 			    </tr>
+
+
 			    <tr>
-			      <td>Vineri</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
+			    <td>Vineri</td>
+			    @foreach ($events as $ora)
+			      
+			    @if($ora->date === '2017-04-07')
+			      <td>
+			      	@if($ora->hour === '08:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			   
+			      <td>
+			      	@if($ora->hour === '10:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '12:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '14:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '16:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			      <td>
+			      	@if($ora->hour === '18:00:00')
+			      		@foreach($courses as $curs)
+			      	@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      	@endif
+			      	@endforeach
+			      	@endif
+			      </td>
+			       @endif
+			      @endforeach
 			    </tr>
+
 			  </tbody>
 			</table> 
 	</div>

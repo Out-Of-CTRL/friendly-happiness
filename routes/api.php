@@ -32,3 +32,11 @@ Route::middleware('auth:api')->get('/room', function (Request $request) {
 Route::middleware('auth:api')->get('/event', function (Request $request) {
     return $request->event();
 });
+
+Route::middleware('auth:api')->get('/grade', function (Request $request) {
+    return $request->grade();
+});
+
+Route::middleware('auth:api')->get('/mod', function (Request $request) {
+    return $request->mod();
+});

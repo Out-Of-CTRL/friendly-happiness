@@ -31,7 +31,11 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="orar">Orar <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Noutăți</a></li>
+                        <li><a href="/group/create">Creare Grup</a></li>
+                        <li><a href="/course/create">Creare Curs</a></li>
+                        <li><a href="/room/create">Creare Sala</a></li>
+                        <li><a href="/grade/create">Introducere note</a></li>
+                        <li><a href="/event/create">Creare Eveniment</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">

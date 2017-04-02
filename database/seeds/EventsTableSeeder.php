@@ -13,7 +13,7 @@ class EventsTableSeeder extends Seeder
     {
         DB::table('events')->insert([
         	'id' => '1',
-        	'date' => '2017/02/04',
+        	'date' => '2017/04/02',
         	'hour' => '10:00',
         	'title' => 'SO',
         	'description' => 'cel mai tare curs',
@@ -22,7 +22,7 @@ class EventsTableSeeder extends Seeder
         ]);
         DB::table('events')->insert([
         	'id' => '2',
-        	'date' => '2017/02/04',
+        	'date' => '2017/04/02',
         	'hour' => '08:00',
         	'title' => 'PA',
         	'description' => 'cel mai tare curs',
@@ -31,7 +31,7 @@ class EventsTableSeeder extends Seeder
         ]);
         DB::table('events')->insert([
         	'id' => '3',
-        	'date' => '2017/02/04',
+        	'date' => '2017/04/02',
         	'hour' => '12:00',
         	'title' => 'FAI',
         	'description' => 'cel mai naspa curs',
@@ -40,7 +40,7 @@ class EventsTableSeeder extends Seeder
         ]);
         DB::table('events')->insert([
         	'id' => '4',
-        	'date' => '2017/02/04',
+        	'date' => '2017/04/02',
         	'hour' => '14:00',
         	'title' => 'Engleza',
         	'description' => 'cel mai tare curs',
@@ -49,7 +49,7 @@ class EventsTableSeeder extends Seeder
         ]);
         DB::table('events')->insert([
         	'id' => '5',
-        	'date' => '2017/02/04',
+        	'date' => '2017/04/02',
         	'hour' => '10:00',
         	'title' => 'ACSO',
         	'description' => 'cel mai tare curs',
@@ -58,7 +58,7 @@ class EventsTableSeeder extends Seeder
         ]);
         DB::table('events')->insert([
         	'id' => '6',
-        	'date' => '2017/02/04',
+        	'date' => '2017/04/02',
         	'hour' => '10:00',
         	'title' => 'Matematica',
         	'description' => 'aoleu',
