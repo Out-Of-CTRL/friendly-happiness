@@ -18,6 +18,7 @@ class EventsTableSeeder extends Seeder
         	'title' => 'SO',
         	'description' => 'cel mai tare curs',
         	'type' => 'curs',
+            'grupa' => 1,
         ]);
         DB::table('events')->insert([
         	'id' => '2',
@@ -26,6 +27,7 @@ class EventsTableSeeder extends Seeder
         	'title' => 'PA',
         	'description' => 'cel mai tare curs',
         	'type' => 'curs',
+            'grupa' => 1,
         ]);
         DB::table('events')->insert([
         	'id' => '3',
@@ -34,6 +36,7 @@ class EventsTableSeeder extends Seeder
         	'title' => 'FAI',
         	'description' => 'cel mai naspa curs',
         	'type' => 'curs',
+            'grupa' => 1,
         ]);
         DB::table('events')->insert([
         	'id' => '4',
@@ -42,6 +45,7 @@ class EventsTableSeeder extends Seeder
         	'title' => 'Engleza',
         	'description' => 'cel mai tare curs',
         	'type' => 'curs',
+            'grupa' => 1,
         ]);
         DB::table('events')->insert([
         	'id' => '5',
@@ -50,6 +54,7 @@ class EventsTableSeeder extends Seeder
         	'title' => 'ACSO',
         	'description' => 'cel mai tare curs',
         	'type' => 'curs',
+            'grupa' => 1,
         ]);
         DB::table('events')->insert([
         	'id' => '6',
@@ -58,6 +63,7 @@ class EventsTableSeeder extends Seeder
         	'title' => 'Matematica',
         	'description' => 'aoleu',
         	'type' => 'seminar',
+            'grupa' => 1,
         ]);
     }
 }
