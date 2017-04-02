@@ -72,10 +72,6 @@
                 </div>
 
                 <div class="links">
-                    <a href="home">Note</a>
-                    <a href="home">Cursuri</a>
-                    <a href="home">Stiri</a>
-                    |
                     <a href="home">Login</a>
                 </div>
             </div>

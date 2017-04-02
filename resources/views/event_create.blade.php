@@ -66,6 +66,20 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('group_id') ? ' has-error' : '' }}">
+                            <label for="group_id" class="col-md-4 control-label">Grupa</label>
+
+                            <div class="col-md-6">
+                                <input id="group_id" class="form-control" name="group_id" required>
+
+                                @if ($errors->has('group_id'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('group_id') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
                             <label for="title" class="col-md-4 control-label">Titlu</label>
 

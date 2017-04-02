@@ -39,6 +39,8 @@ Route::resource('room', 'RoomController');
 
 Route::resource('event', 'EventController');
 
+Route::resource('grade', 'GradeController');
+
 Auth::routes();
 
 Route::get('home', function () {

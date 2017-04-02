@@ -22,6 +22,7 @@ class CreateEventsTable extends Migration
             $table->string('title');
             $table->longText('description');
             $table->string('type');
+            $table->string('grupa');
             $table->timestamps();
         });
     }
