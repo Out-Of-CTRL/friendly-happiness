@@ -27,6 +27,10 @@ Route::get('/profil', function () {
     return view('profil');
 });
 
+Route::get('/testTemplate', function () {
+    return view('testTemplate');
+});
+
 Route::get('/orar', function () {
     return view('orar');
 });

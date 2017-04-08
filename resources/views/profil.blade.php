@@ -25,12 +25,12 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="home">FiiBook</a>
+					<a class="navbar-brand" href="/home">FiiBook</a>
 				</div>
 
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li><a href="orar">Orar <span class="sr-only">(current)</span></a></li>
+						<li><a href="/orar">Orar <span class="sr-only">(current)</span></a></li>
                         <li><a href="/group/create">Creare Grup</a></li>
                         <li><a href="/course/create">Creare Curs</a></li>
                         <li><a href="/room/create">Creare Sala</a></li>

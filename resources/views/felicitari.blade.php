@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="sidenavLeft.css">
     <link rel="stylesheet" type="text/css" href="sidenavRight.css">
 </head>
-<body onLoad = "getGreeting();">
+<body>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -25,12 +25,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="home">FiiBook</a>
+                    <a class="navbar-brand" href="/home">FiiBook</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="orar">Orar <span class="sr-only">(current)</span></a></li>
+                        <li><a href="/orar">Orar <span class="sr-only">(current)</span></a></li>
                         <li><a href="/group/create">Creare Grup</a></li>
                         <li><a href="/course/create">Creare Curs</a></li>
                         <li><a href="/room/create">Creare Sala</a></li>
@@ -46,15 +46,16 @@
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                             Logout
-                                        </a></li>
+                                        </a><form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form></li>
                             </ul>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <br><br>
-        
+    <br><br><br>       
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
