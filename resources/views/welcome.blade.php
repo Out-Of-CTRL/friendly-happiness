@@ -72,7 +72,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="home">Login</a>
+                    <a href="login">Login</a>
+                    <a href="register">Register</a>
                 </div>
             </div>
         </div>
