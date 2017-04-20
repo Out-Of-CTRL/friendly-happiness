@@ -96,9 +96,15 @@
 			  		Luni
 			  	</td>
 			  	<td>
-			  		 @foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-03')
-			      	 @if($ora->hour === '08:00:00')
+			      	@foreach ($events as $ora)
+
+			  		 <?php
+			  		 $day = 1;
+			   		 ?>
+
+			   		 @if($ora->zi === $day)
+			  
+			      	 @if($ora->hour === 8 )
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -110,8 +116,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-03')
-			      	 @if($ora->hour === '10:00:00')
+
+			  		<?php
+			  		$day = 1;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 10)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -123,8 +135,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-03')
-			      	 @if($ora->hour === '12:00:00')
+
+			  		<?php
+			  		$day = 1;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 12)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -136,8 +154,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-03')
-			      	 @if($ora->hour === '14:00:00')
+
+			  		<?php
+			  		$day = 1;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 14)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -149,8 +173,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-03')
-			      	 @if($ora->hour === '16:00:00')
+
+			  		<?php
+			  		$day = 1;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 16)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -163,8 +193,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-03')
-			      	 @if($ora->hour === '18:00:00')
+
+			  		<?php
+			  		$day = 1;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 18)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -181,12 +217,18 @@
 
 			  	<tr>
 			  	<td>
-			  	Marti
+			  	Marți
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-04')
-			      	 @if($ora->hour === '08:00:00')
+
+			  		<?php
+			  		$day = 2;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 8)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -198,8 +240,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-04')
-			      	 @if($ora->hour === '10:00:00')
+
+			  		<?php
+			  		$day = 2;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 10)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -211,8 +259,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-04')
-			      	 @if($ora->hour === '12:00:00')
+
+			  		<?php
+			  		$day = 2;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 12)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -224,8 +278,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-04')
-			      	 @if($ora->hour === '14:00:00')
+
+			  		<?php
+			  		$day = 2;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 14)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -237,8 +297,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-04')
-			      	 @if($ora->hour === '16:00:00')
+
+			  		<?php
+			  		$day = 2;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 16)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -250,8 +316,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-04')
-			      	 @if($ora->hour === '18:00:00')
+
+			  		<?php
+			  		$day = 2;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 18)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -273,8 +345,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-05')
-			      	 @if($ora->hour === '08:00:00')
+
+			  		<?php
+			  		$day = 3;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 8)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -286,8 +364,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-05')
-			      	 @if($ora->hour === '10:00:00')
+
+			  		<?php
+			  		$day = 3;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 10)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -299,8 +383,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-05')
-			      	 @if($ora->hour === '12:00:00')
+
+			  		<?php
+			  		$day = 3;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 12)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -312,8 +402,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-05')
-			      	 @if($ora->hour === '14:00:00')
+
+			  		<?php
+			  		$day = 3;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 14)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -325,8 +421,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-05')
-			      	 @if($ora->hour === '16:00:00')
+
+			  		<?php
+			  		$day = 3;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 16)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -338,8 +440,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-05')
-			      	 @if($ora->hour === '18:00:00')
+
+			  		<?php
+			  		$day = 3;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 18)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -361,8 +469,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-06')
-			      	 @if($ora->hour === '08:00:00')
+
+			  		<?php
+			  		$day = 4;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 8)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -374,8 +488,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-06')
-			      	 @if($ora->hour === '10:00:00')
+
+			  		<?php
+			  		$day = 4;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 10)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -387,8 +507,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-06')
-			      	 @if($ora->hour === '12:00:00')
+
+			  		<?php
+			  		$day = 4;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 12)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -400,8 +526,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-06')
-			      	 @if($ora->hour === '14:00:00')
+
+			  		<?php
+			  		$day = 4;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 14)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -413,8 +545,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-06')
-			      	 @if($ora->hour === '16:00:00')
+
+			  		<?php
+			  		$day = 4;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 16)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -426,8 +564,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-06')
-			      	 @if($ora->hour === '18:00:00')
+
+			  		<?php
+			  		$day = 4;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 18)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -449,8 +593,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-07')
-			      	 @if($ora->hour === '08:00:00')
+
+			  		<?php
+			  		$day = 5;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 8)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -462,8 +612,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-07')
-			      	 @if($ora->hour === '10:00:00')
+
+			  		<?php
+			  		$day = 5;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 10)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -475,8 +631,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-07')
-			      	 @if($ora->hour === '12:00:00')
+
+			  		<?php
+			  		$day = 5;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 12)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -488,8 +650,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-07')
-			      	 @if($ora->hour === '14:00:00')
+
+			  		<?php
+			  		$day = 5;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 14)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -501,8 +669,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-07')
-			      	 @if($ora->hour === '16:00:00')
+
+			  		<?php
+			  		$day = 5;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 16)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -514,8 +688,14 @@
 			  	</td>
 			  	<td>
 			  		@foreach ($events as $ora)
-			   		 @if($ora->date === '2017-04-07')
-			      	 @if($ora->hour === '18:00:00')
+
+			  		<?php
+			  		$day = 5;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 18)
 			      		@foreach($courses as $curs)
 			      		@if($curs->id === $ora->course_id)
 			      		{{ $curs->materie }}
@@ -527,7 +707,256 @@
 			      	@endforeach
 			  	</td>
 			  	</tr>
-			
+
+
+
+
+
+			  	<tr>
+			  	<td>
+			  	Sâmbătă
+			  	</td>
+			  	<td>
+			  		@foreach ($events as $ora)
+
+			  		<?php
+			  		$day = 6;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 8)
+			      		@foreach($courses as $curs)
+			      		@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      		@endif
+			      		@endforeach
+			      	@endif
+			      	@endif
+			      	@endforeach
+			  	</td>
+			  	<td>
+			  		@foreach ($events as $ora)
+
+			  		<?php
+			  		$day = 6;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 10)
+			      		@foreach($courses as $curs)
+			      		@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      		@endif
+			      		@endforeach
+			      	@endif
+			      	@endif
+			      	@endforeach
+			  	</td>
+			  	<td>
+			  		@foreach ($events as $ora)
+
+			  		<?php
+			  		$day = 6;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 12)
+			      		@foreach($courses as $curs)
+			      		@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      		@endif
+			      		@endforeach
+			      	@endif
+			      	@endif
+			      	@endforeach
+			  	</td>
+			  	<td>
+			  		@foreach ($events as $ora)
+
+			  		<?php
+			  		$day = 6;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 14)
+			      		@foreach($courses as $curs)
+			      		@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      		@endif
+			      		@endforeach
+			      	@endif
+			      	@endif
+			      	@endforeach
+			  	</td>
+			  	<td>
+			  		@foreach ($events as $ora)
+
+			  		<?php
+			  		$day = 6;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 16)
+			      		@foreach($courses as $curs)
+			      		@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      		@endif
+			      		@endforeach
+			      	@endif
+			      	@endif
+			      	@endforeach
+			  	</td>
+			  	<td>
+			  		@foreach ($events as $ora)
+
+			  		<?php
+			  		$day = 6;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 18)
+			      		@foreach($courses as $curs)
+			      		@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      		@endif
+			      		@endforeach
+
+			      	@endif
+			      	@endif
+			      	@endforeach
+			  	</td>
+			  	</tr>
+				
+
+
+
+
+			  	<tr>
+			  	<td>
+			  	Duminică
+			  	</td>
+			  	<td>
+			  		@foreach ($events as $ora)
+
+			  		<?php
+			  		$day = 7;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 8)
+			      		@foreach($courses as $curs)
+			      		@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      		@endif
+			      		@endforeach
+			      	@endif
+			      	@endif
+			      	@endforeach
+			  	</td>
+			  	<td>
+			  		@foreach ($events as $ora)
+
+			  		<?php
+			  		$day = 7;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 10)
+			      		@foreach($courses as $curs)
+			      		@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      		@endif
+			      		@endforeach
+			      	@endif
+			      	@endif
+			      	@endforeach
+			  	</td>
+			  	<td>
+			  		@foreach ($events as $ora)
+
+			  		<?php
+			  		$day = 7;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 12)
+			      		@foreach($courses as $curs)
+			      		@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      		@endif
+			      		@endforeach
+			      	@endif
+			      	@endif
+			      	@endforeach
+			  	</td>
+			  	<td>
+			  		@foreach ($events as $ora)
+
+			  		<?php
+			  		$day = 7;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 14)
+			      		@foreach($courses as $curs)
+			      		@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      		@endif
+			      		@endforeach
+			      	@endif
+			      	@endif
+			      	@endforeach
+			  	</td>
+			  	<td>
+			  		@foreach ($events as $ora)
+
+			  		<?php
+			  		$day = 7;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 16)
+			      		@foreach($courses as $curs)
+			      		@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      		@endif
+			      		@endforeach
+			      	@endif
+			      	@endif
+			      	@endforeach
+			  	</td>
+			  	<td>
+			  		@foreach ($events as $ora)
+
+			  		<?php
+			  		$day = 7;
+			  		?>
+
+			   		 @if($ora->zi === $day)
+
+			      	 @if($ora->hour === 18)
+			      		@foreach($courses as $curs)
+			      		@if($curs->id === $ora->course_id)
+			      		{{ $curs->materie }}
+			      		@endif
+			      		@endforeach
+
+			      	@endif
+			      	@endif
+			      	@endforeach
+			  	</td>
+			  	</tr>
 
 			  </tbody>
 			</table> 

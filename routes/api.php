@@ -40,3 +40,7 @@ Route::middleware('auth:api')->get('/grade', function (Request $request) {
 Route::middleware('auth:api')->get('/mod', function (Request $request) {
     return $request->mod();
 });
+
+Route::middleware('auth:api')->get('/new', function (Request $request) {
+    return $request->new();
+});

@@ -47,6 +47,8 @@ Route::resource('grade', 'GradeController');
 
 Route::resource('mods', 'ModController');
 
+Route::resource('news', 'NewController');
+
 Auth::routes();
 
 Route::get('home', function () {
