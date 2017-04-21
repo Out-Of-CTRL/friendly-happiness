@@ -33,7 +33,7 @@
 						<li><a href="/orar">Orar <span class="sr-only">(current)</span></a></li>
                         <li><a href="/group/create">Creare Grup</a></li>
                         <li><a href="/course/create">Creare Curs</a></li>
-                        <li><a href="/room/create">Creare Sala</a></li>
+                        <li><a href="/room/create">Creare Sală</a></li>
                         <li><a href="/grade/create">Introducere note</a></li>
                         <li><a href="/event/create">Creare Eveniment</a></li>
 					</ul>
@@ -57,40 +57,382 @@
 		</nav>
 		<br><br><br><br><br>
 	<div class="container">
-		<div class="row">
-			<table class="table table-striped table-hover table-bordered" >
-				<h1 style="text-align: center;">Profilul meu</h1>
-				<br>
-			  <thead class="black_theme">
-			    <tr>
-			      <th style="width:25%">#</th>
-			      <th>Date</th>
-			    </tr>
-			  </thead>
-			  <tbody>
-			    <tr>
-			      <td>Nume</td>
-			      <td>Column content</td>
-			    </tr>
-			    <tr>
-			      <td>Prenume</td>
-			      <td>Column content</td>
-			    </tr>
-			    <tr>
-			      <td>Adresa (webmail)</td>
-			      <td>Column content</td>
-			    </tr>
-			    <tr>
-			      <td>An</td>
-			      <td>Column content</td>
-			    </tr>
-			    <tr>
-			      <td>Grupa</td>
-			      <td>Column content</td>
-			    </tr>
-			  </tbody>
-			</table> 
-		</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <h1>Modifică profilul</h1>
+  	<hr>
+	<div class="row">
+      <!-- left column -->
+      <div class="col-md-3">
+        <div class="text-center">
+          <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+          <h6>Upload a different photo...</h6>
+          
+          <input type="file" class="form-control">
+        </div>
+      </div>
+      
+      <!-- edit form column -->
+      <div class="col-md-9 personal-info">
+        <div class="alert alert-info alert-dismissable">
+          <a class="panel-close close" data-dismiss="alert">×</a> 
+          <i class="fa fa-coffee"></i>
+          This is an <strong>.alert</strong>. Use this to show important messages to the user.
+        </div>
+        <h3>Personal info</h3>
+        
+
+        <form class="form-horizontal" role="form" method="POST" action="{!! action('ModUserController@update', ['id' => 123]) !!}">
+          {{ csrf_field() }}
+
+          <div class="form-group{{ $errors->has('nume') ? ' has-error' : '' }}">
+            <label for="nume" class="col-lg-3 control-label">Nume:</label>
+            <div class="col-lg-8">
+            	<?php  $prevNume = Auth::user()->nume; ?>
+              	<input id="nume" class="form-control" name="nume" type="text" value={{ $prevNume }} > 
+            
+				@if( $errors->has('nume'))
+                        <span class="help-block">
+                        <strong>{{ $errors->first('nume') }}</strong>
+                    </span>
+                @endif
+
+            </div>
+          </div>
+        
+
+
+          <div class="form-group{{ $errors->has('prenume') ? ' has-error' : '' }}">
+            <label for="prenume" class="col-lg-3 control-label">Prenume:</label>
+            <div class="col-lg-8">
+            	 
+            	<?php  $prevPrenume = Auth::user()->prenume; ?>
+             	<input id="prenume" class="form-control" name="prenume" type="text" value={{ $prevPrenume }}>
+
+            	@if( $errors->has('prenume'))
+                        <span class="help-block">
+                        <strong>{{ $errors->first('prenume') }}</strong>
+                    </span>
+                @endif
+
+            </div>
+          </div>
+
+
+
+          <div class="form-group{{ $errors->has('grupa') ? ' has-error' : '' }}">
+            <label for="grupa" class="col-lg-3 control-label">An și grupă:</label>
+            <div class="col-lg-8">
+              	<?php  $prevGrupa = Auth::user()->grupa; ?>
+              	<input id="grupa" class="form-control" name="grupa" type="text" value={{ $prevGrupa }}>
+            
+              	@if( $errors->has('grupa'))
+                        <span class="help-block">
+                        <strong>{{ $errors->first('grupa') }}</strong>
+                    </span>
+                @endif
+
+            </div>
+          </div>
+
+
+
+          <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+            <label for="email" class="col-lg-3 control-label">Email:</label>
+            <div class="col-lg-8">
+              	<?php  $prevEmail = Auth::user()->email; ?>
+              	<input id="email" class="form-control" name="email" type="text" value={{ $prevEmail }}>
+            	
+            	@if( $errors->has('email'))
+                        <span class="help-block">
+                        <strong>{{ $errors->first('email') }}</strong>
+                    </span>
+                @endif
+
+            </div>
+          </div>
+
+
+
+          <div class="form-group{{ $errors->has('matricol') ? ' has-error' : '' }}">
+            <label for="matricol" class="col-md-3 control-label">Număr matricol:</label>
+            <div class="col-md-8">
+              	<?php  $prevMatricol = Auth::user()->matricol; ?>
+              	<input id="matricol" class="form-control" name="matricol" type="text" value={{ $prevMatricol }}>
+           		
+           		@if( $errors->has('matricol'))
+                        <span class="help-block">
+                        <strong>{{ $errors->first('matricol') }}</strong>
+                    </span>
+                @endif
+
+            </div>
+          </div>
+
+
+
+          <div class="form-group">
+            <label class="col-md-3 control-label">Password:</label>
+            <div class="col-md-8">
+            	<?php  $prevPassword1 = Auth::user()->password; ?>
+              <input class="form-control" type="password" value={{ $prevPassword1 }}>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Confirm password:</label>
+            <div class="col-md-8">
+            	<?php  $prevPassword2 = Auth::user()->password; ?>
+              <input class="form-control" type="password" value={{ $prevPassword2 }}>
+
+              
+              @if( $prevPassword1 != $prevPassword2 )
+              
+              	<?php $prevPassword1 = Auth::user()->password; ?>
+                <span class="help-block">
+                    <strong>{{ $errors->first('matricol') }}</strong>
+                </span>
+              
+              @endif
+
+            </div>
+          </div>
+
+         <?php 
+            		$idLogat = Auth::user()->id;	
+
+                      foreach ($users as $individ) 
+                      {
+                        # code...
+                        if($individ->id === $idLogat)
+                         {
+                         	$individ->nume = $prevNume;
+                         	$individ->prenume = $prevPrenume; 
+                         	$individ->grupa = $prevGrupa;
+                         	$individ->matricol = $prevMatricol;
+                         	$individ->email = $prevEmail;
+                         	$individ->password = $prevPassword1;
+                         	#$individ->save();
+
+                         }
+                      }
+                      #moduser.update($individ);
+         ?>
+                    
+
+
+
+          <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-8">
+					<button type="submit" class="btn btn-primary">
+                        Salvează
+                    </button>
+
+
+              
+              <span></span>
+              <input type="reset" class="btn btn-default" value="Renunță">
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+</div>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		<div class="row">
 			<table class="table table-striped table-hover table-bordered" >
 				<h1 style="text-align: center;">Rezultate obținute</h1>
