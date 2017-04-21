@@ -54,7 +54,16 @@ Auth::routes();
 Route::get('home', function () {
     return view('home',['events' => App\Event::all(),'courses' => App\Course::all(),'grades' => App\Grades::all(), 'rooms' => App\Room::all(), 'mods' => App\Mods::all()]);
 })->name('home');
+
+
 Route::get('orar', function () {
     return view('orar',['events' => App\Event::all(),'courses' => App\Course::all(),'grades' => App\Grades::all(), 'rooms' => App\Room::all(), 'mods' => App\Mods::all()]);
 })->name('orar');
+
+
+Route::get('profil', function () {
+    return view('profil',['events' => App\Event::all(),'courses' => App\Course::all(),'grades' => App\Grades::all(), 'rooms' => App\Room::all(), 'mods' => App\Mods::all()]);
+})->name('profil');
+
+
 Route::get('felicitari', 'FelicitariController@index')->name('felicitari');

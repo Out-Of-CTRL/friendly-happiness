@@ -37,13 +37,13 @@ class CoursesTableSeeder extends Seeder
         ]);
         DB::table('courses')->insert([
         	'id' => '5',
-        	'materie' => 'Matematica',
+        	'materie' => 'POO',
         	'user_id' => '2',
         	
         ]);
         DB::table('courses')->insert([
         	'id' => '6',
-        	'materie' => 'FAI',
+        	'materie' => 'PS',
         	'user_id' => '2',
         	
         ]);
