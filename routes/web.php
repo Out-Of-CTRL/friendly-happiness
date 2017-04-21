@@ -35,6 +35,13 @@ Route::get('/orar', function () {
     return view('orar');
 });
 
+Route::get('/admin', function () {
+	if (Auth::user()->id == 1)
+    return view('admin');
+	else
+	return view('home',['events' => App\Event::all(),'courses' => App\Course::all(),'grades' => App\Grades::all(), 'rooms' => App\Room::all(), 'mods' => App\Mods::all()]);
+})->name('home');
+
 Route::resource('group', 'GroupController');
 
 Route::resource('course', 'CourseController');
@@ -49,9 +56,14 @@ Route::resource('mods', 'ModController');
 
 Route::resource('news', 'NewController');
 
+Route::resource('moduser', 'ModUserController');
+
 Auth::routes();
 
 Route::get('home', function () {
+	if (Auth::user()->id == 1)
+    return view('admin');
+	else
     return view('home',['events' => App\Event::all(),'courses' => App\Course::all(),'grades' => App\Grades::all(), 'rooms' => App\Room::all(), 'mods' => App\Mods::all()]);
 })->name('home');
 
@@ -62,8 +74,7 @@ Route::get('orar', function () {
 
 
 Route::get('profil', function () {
-    return view('profil',['events' => App\Event::all(),'courses' => App\Course::all(),'grades' => App\Grades::all(), 'rooms' => App\Room::all(), 'mods' => App\Mods::all()]);
+    return view('profil',['events' => App\Event::all(),'courses' => App\Course::all(),'grades' => App\Grades::all(), 'rooms' => App\Room::all(), 'users' => App\User::all(), 'mods' => App\Mods::all()]);
 })->name('profil');
-
 
 Route::get('felicitari', 'FelicitariController@index')->name('felicitari');

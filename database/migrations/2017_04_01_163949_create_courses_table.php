@@ -16,7 +16,8 @@ class CreateCoursesTable extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->increments('id')->index();
             $table->string('materie')->index();
-            $table->integer('user_id')->index();
+            $table->integer('user_id')->index(); #useless
+            $table->integer('nr_credite')->index()->nullable();
             $table->timestamps();
         });
     }

@@ -17,11 +17,27 @@ class RoomsTableSeeder extends Seeder
         ]);
         DB::table('rooms')->insert([
         	'id' => '2',
-        	'nume' => 'C419',
+        	'nume' => 'C112',
         ]);
         DB::table('rooms')->insert([
         	'id' => '3',
-        	'nume' => 'C3',
+        	'nume' => 'C403',
+        ]);
+        DB::table('rooms')->insert([
+        	'id' => '4',
+        	'nume' => 'C413',
+        ]);
+        DB::table('rooms')->insert([
+        	'id' => '5',
+        	'nume' => 'C903',
+        ]);
+        DB::table('rooms')->insert([
+        	'id' => '6',
+        	'nume' => 'C905',
+        ]);
+        DB::table('rooms')->insert([
+        	'id' => '7',
+        	'nume' => 'C909',
         ]);
     }
 }

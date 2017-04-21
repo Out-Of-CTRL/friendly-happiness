@@ -14,7 +14,7 @@ class GroupsTableSeeder extends Seeder
         DB::table('groups')->insert([
         	'id' => '1',
         	'nume' => 'I1A1',
-        	'sef' => '1',
+        	'sef' => '2',
         ]);
         DB::table('groups')->insert([
         	'id' => '2',

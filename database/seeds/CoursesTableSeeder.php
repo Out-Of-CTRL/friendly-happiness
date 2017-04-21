@@ -25,7 +25,7 @@ class CoursesTableSeeder extends Seeder
         ]);
         DB::table('courses')->insert([
         	'id' => '3',
-        	'materie' => 'ACSO',
+        	'materie' => 'FAI',
         	'user_id' => '1',
         	
         ]);

@@ -1,0 +1,10 @@
+titluri
+favicon
+linkuri admin
+linkuri profil (la admin)
+scos linkuri student
+pus la admin doar ce trebuie
+populat tabelele cu date calumea (important)
+facut formulare putintel mai functionale, nu cu mult :D
+
+BOOTSTRAP si fonturi descarcate ca sa nu mai ia foc cu putin spre deloc internet

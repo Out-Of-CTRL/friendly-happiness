@@ -13,25 +13,39 @@ class UsersTableSeeder extends Seeder
     {
         DB::table('users')->insert([
             'id' => '1',
-        	'matricol' => 'asd',
-        	'email' => 'test@test.com',
-        	'password' => bcrypt('testtest'),
-        	'nume' => 'qwe',
-        	'prenume' => 'zxc',
-        	'tata' => 'a',
-        	'mama' => 'b',
-            'grupa' => '1',
+        	'matricol' => '0',
+        	'email' => 'admin@fiibook.com',
+        	'password' => bcrypt('admin'),
+        	'nume' => 'FII',
+        	'prenume' => 'FII',
+        	'tata' => '',
+        	'mama' => '',
+            'grupa' => '',
+            'sex' => 'M',
         ]);
         DB::table('users')->insert([
             'id' => '2',
-            'matricol' => 'asd2',
+            'matricol' => '1',
             'email' => 'test@test.test',
             'password' => bcrypt('testtest'),
-            'nume' => 'test1',
-            'prenume' => 'testp',
-            'tata' => 'a',
-            'mama' => 'b',
-            'grupa' => '1',
+            'nume' => 'Numetest1',
+            'prenume' => 'Prenumetest1',
+            'tata' => 'Tatateset1',
+            'mama' => 'Mamatest1',
+            'grupa' => '1A1',
+            'sex' => 'M',
+        ]);
+        DB::table('users')->insert([
+            'id' => '3',
+            'matricol' => '2',
+            'email' => 'test2@test.test',
+            'password' => bcrypt('testtest'),
+            'nume' => 'Numetest2',
+            'prenume' => 'Prenumetest2',
+            'tata' => 'Tatateset2',
+            'mama' => 'Mamatest2',
+            'grupa' => '1A2',
+            'sex' => 'M',
         ]);
     }
 }
