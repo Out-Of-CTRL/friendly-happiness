@@ -35,7 +35,7 @@
                         <li><a href="/orar">Orar <span class="sr-only">(current)</span></a></li>
                         <li><a href="/group/create">Creare Grup</a></li>
                         <li><a href="/course/create">Creare Curs</a></li>
-                        <li><a href="/room/create">Creare Sala</a></li>
+                        <li><a href="/room/create">Creare Sală</a></li>
                         <li><a href="/grade/create">Introducere note</a></li>
                         <li><a href="/event/create">Creare Eveniment</a></li>
                     </ul>
@@ -93,38 +93,60 @@
 <?php
 $azi = Carbon\Carbon::now()->format('Y-m-d');
 ?>
-            <table class="table table-striped table-hover" >
-            <h1 style="text-align: center;">Orarul pe ziua de azi </h1>
-              <thead class="black_theme">
-                <tr>
-                  <th>#</th>
-                  <th>Materie</th>
-                  <th>Oră</th>
-                  <th>Sala</th>
-                </tr>
-              </thead>
-              <tbody>
-              @foreach ($events as $event)
-              @if (strtoupper(Auth::user()->grupa) === strtoupper($event->grupa))
-              @if ($event->date === $azi)
-                <tr>
-                  <td>{{ $event->id }}</td>
-                  <td>{{ $event->title }}</td>
-                  <td>{{ $event->hour }}</td>
-                  <td>
-                    @foreach($rooms as $camera)
-                        @if ($camera->id === $event->room_id)
-                            {{ $camera->nume }}
-                        @endif
+      <table class="table table-striped table-hover" >
+        <h1 style="text-align: center;">Orarul pe ziua de azi </h1>
+        <thead class="black_theme">
+            <tr>
+                <th>#</th>
+                <th>Materie</th>
+                <th>Oră</th>
+                <th>Sala</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php $counter = 0; ?>
+             
+            @foreach ($events as $ora)
+
+            <?php
+            $today = getdate();
+            $day = $today['wday'];
+            ?>
+
+            @if($ora->zi === $day)
+                    <?php $counter = $counter + 1; ?>
+                    @foreach($courses as $curs)
+                        @if($curs->id === $ora->course_id)
+                            <tr>
+                                <td>
+                                    {{ $counter }}
+                                </td>
+
+                                <td>
+                                    {{ $curs->materie }}
+                                </td>
+
+                                <td>
+                                    {{ $ora->hour }}
+                                </td>
+
+                                <td>
+                                    @foreach($rooms as $sala)
+                                        @if($sala->id === $ora->course_id)
+                                            {{ $sala->nume }}
+                                        @endif
+                                    @endforeach
+                                </td>
+                            </tr>
+                          @endif
                     @endforeach
-                  </td>
-                </tr>
-                @endif
-              @endif
-              @endforeach 
+                    
+            @endif
+            @endforeach
+             
                 
         </tbody>
-        </table>
+      </table>
         </div>
         <?php
         $counter=1;
