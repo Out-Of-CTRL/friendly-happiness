@@ -161,7 +161,7 @@
         <h3>Personal info</h3>
         
 
-        <form class="form-horizontal" role="form" method="POST" action="{!! action('ModUserController@update', ['id' => 123]) !!}">
+        <form class="form-horizontal" role="form" method="POST" action="{!! action('ModUserController@update', ['id' => Auth::User()->id]) !!}">
           {{ csrf_field() }}
 
           <div class="form-group{{ $errors->has('nume') ? ' has-error' : '' }}">
@@ -322,9 +322,49 @@
 
 
 
+<!--<form class="form-horizontal" role="form" method="POST" action="{!! action('ModUserController@update', ['id' => Auth::User()->id]) !!}">
+                        {{ csrf_field() }}
 
+                        <div class="form-group{{ $errors->has('nume') ? ' has-error' : '' }}">
+                            <label for="nume" class="col-md-4 control-label">nume</label>
 
+                            <div class="col-md-6">
+                                <input id="nume" type="nume" class="form-control" name="nume" value="{{ old('nume') }}" required autofocus>
 
+                                @if ($errors->has('nume'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('nume') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('prenume') ? ' has-error' : '' }}">
+                            <label for="prenume" class="col-md-4 control-label">ID Titular</label>
+
+                            <div class="col-md-6">
+                                <input id="prenume" type="prenume" class="form-control" name="prenume" required>
+
+                                @if ($errors->has('prenume'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('prenume') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                         <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Trimite
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                    </form>
+
+-->
 
 
 

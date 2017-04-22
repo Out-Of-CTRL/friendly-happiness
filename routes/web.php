@@ -73,7 +73,7 @@ Route::get('orar', function () {
 })->name('orar');
 
 
-Route::get('profil', function () {
+Route::any('profil', function () {
     return view('profil',['events' => App\Event::all(),'courses' => App\Course::all(),'grades' => App\Grades::all(), 'rooms' => App\Room::all(), 'users' => App\User::all(), 'mods' => App\Mods::all()]);
 })->name('profil');
 

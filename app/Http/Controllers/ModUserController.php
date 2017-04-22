@@ -34,7 +34,7 @@ class ModUserController extends Controller
 
         //group = $request->user()->id;
 
-        $request->user()->id = $request->id;
+        /*$request->user()->id = $request->id;
 
         $request->user()->matricol = $request->matricol;
 
@@ -56,7 +56,7 @@ class ModUserController extends Controller
 
         $request->user()->save();
 
-        return redirect()->route('profil');
+        return redirect()->route('profil');*/
 
 
         return redirect()->route('profil');

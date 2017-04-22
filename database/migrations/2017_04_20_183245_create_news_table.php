@@ -20,7 +20,7 @@ class CreateNewsTable extends Migration
             $table->longText('text')->nullable();
             $table->timestamps();
         });
-        Schema::drop('news');
+        #Schema::drop('news');
     }
 
     /**
