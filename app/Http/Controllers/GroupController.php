@@ -25,14 +25,11 @@ class GroupController extends Controller
     {
         $this->validate($request, [
             'nume' => 'required|unique:groups',
-            'sef' => 'required|numeric',
         ]);
 
         $group = new \App\Group;
 
         $group->nume = $request->nume;
-
-        $group->sef = $request->sef;
 
         $group->save();
 

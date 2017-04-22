@@ -41,7 +41,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->prenume }}<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="profil">Profilul meu</a></li>
+                                <li><a href="/profil">Profilul meu</a></li>
                                 <li><a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -60,7 +60,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">Creare grupa</div>
 
                 <form class="form-horizontal" role="form" method="POST" action="{{ route('group.store') }}">
                         {{ csrf_field() }}
@@ -74,20 +74,6 @@
                                 @if ($errors->has('nume'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('nume') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('sef') ? ' has-error' : '' }}">
-                            <label for="sef" class="col-md-4 control-label">ID Șef</label>
-
-                            <div class="col-md-6">
-                                <input id="sef" class="form-control" name="sef" required>
-
-                                @if ($errors->has('sef'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('sef') }}</strong>
                                     </span>
                                 @endif
                             </div>

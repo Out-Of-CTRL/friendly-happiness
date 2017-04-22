@@ -41,7 +41,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->prenume }}<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="profil">Profilul meu</a></li>
+                                <li><a href="/profil">Profilul meu</a></li>
                                 <li><a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -60,13 +60,13 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">Creare curs</div>
 
                 <form class="form-horizontal" role="form" method="POST" action="{{ route('course.store') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('materie') ? ' has-error' : '' }}">
-                            <label for="materie" class="col-md-4 control-label">materie</label>
+                            <label for="materie" class="col-md-4 control-label">Nume Materie</label>
 
                             <div class="col-md-6">
                                 <input id="materie" type="materie" class="form-control" name="materie" value="{{ old('materie') }}" required autofocus>
@@ -79,15 +79,15 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('user_id') ? ' has-error' : '' }}">
-                            <label for="user_id" class="col-md-4 control-label">ID Titular</label>
+                        <div class="form-group{{ $errors->has('nr_credite') ? ' has-error' : '' }}">
+                            <label for="nr_credite" class="col-md-4 control-label">Numar Credire</label>
 
                             <div class="col-md-6">
-                                <input id="user_id" type="user_id" class="form-control" name="user_id" required>
+                                <input id="nr_credite" type="nr_credite" class="form-control" name="nr_credite" required>
 
-                                @if ($errors->has('user_id'))
+                                @if ($errors->has('nr_credite'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('user_id') }}</strong>
+                                        <strong>{{ $errors->first('nr_credite') }}</strong>
                                     </span>
                                 @endif
                             </div>

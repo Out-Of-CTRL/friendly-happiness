@@ -3,8 +3,9 @@ favicon
 linkuri admin
 linkuri profil (la admin)
 scos linkuri student
-pus la admin doar ce trebuie
-populat tabelele cu date calumea (important)
-facut formulare putintel mai functionale, nu cu mult :D
+pus la admin doar ce trebuie ISH
+populat tabelele cu date calumea (important) DONE (fara note, more will come)
+facut formulare putintel mai functionale, nu cu mult :D DONE
+Reparat linkuri peste tot
 
 BOOTSTRAP si fonturi descarcate ca sa nu mai ia foc cu putin spre deloc internet

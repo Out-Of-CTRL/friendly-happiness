@@ -24,11 +24,11 @@ class CreateUsersTable extends Migration
             $table->string('mama')->nullable();
             $table->string('grupa')->nullable();
             $table->string('sex', 1)->nullable();
-            $table->date('date_of_birth')->nullable();
+            #$table->date('date_of_birth')->nullable();
             $table->rememberToken();
             $table->timestamps();
 
-            
+
         });
     }
 
