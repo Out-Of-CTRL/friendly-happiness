@@ -9,7 +9,7 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta titlu="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8"> 
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <link rel="stylesheet" type="text/css" href="sidenavLeft.css">
@@ -60,62 +60,48 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Introducere nota</div>
+                <div class="panel-heading">Creaare Noutati</div>
 
-                <form class="form-horizontal" role="form" method="POST" action="{{ route('grade.store') }}">
+                <form class="form-horizontal" role="form" method="POST" action="{{ route('room.store') }}">
                         {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('val') ? ' has-error' : '' }}">
-                            <label for="val" class="col-md-4 control-label">Nota</label>
+                        <div class="form-group{{ $errors->has('titlu') ? ' has-error' : '' }}">
+                            <label for="titlu" class="col-md-4 control-label">Titlu</label>
 
                             <div class="col-md-6">
-                                <input id="val" class="form-control" name="val" value="{{ old('val') }}" required autofocus>
+                                <input id="titlu" type="titlu" class="form-control" name="titlu" value="{{ old('titlu') }}" required autofocus>
 
-                                @if ($errors->has('val'))
+                                @if ($errors->has('titlu'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('val') }}</strong>
+                                        <strong>{{ $errors->first('titlu') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('course_id') ? ' has-error' : '' }}">
-                            <label for="course_id" class="col-md-4 control-label">ID Curs</label>
+                         <div class="form-group{{ $errors->has('link_imagine') ? ' has-error' : '' }}">
+                            <label for="link_imagine" class="col-md-4 control-label">Link imagine</label>
 
                             <div class="col-md-6">
-                                <input id="course_id" class="form-control" name="course_id" required>
+                                <input id="link_imagine" type="link_imagine" class="form-control" name="link_imagine" value="{{ old('link_imagine') }}">
 
-                                @if ($errors->has('course_id'))
+                                @if ($errors->has('link_imagine'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('course_id') }}</strong>
+                                        <strong>{{ $errors->first('link_imagine') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
-                         <div class="form-group{{ $errors->has('user_id') ? ' has-error' : '' }}">
-                            <label for="user_id" class="col-md-4 control-label">ID Student</label>
+                        <div class="form-group{{ $errors->has('text') ? ' has-error' : '' }}">
+                            <label for="text" class="col-md-4 control-label">Text</label>
 
                             <div class="col-md-6">
-                                <input id="user_id" class="form-control" name="user_id" required>
+                                <input id="text" type="text" class="form-control" name="text" value="{{ old('text') }}">
 
-                                @if ($errors->has('user_id'))
+                                @if ($errors->has('text'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('user_id') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('date') ? ' has-error' : '' }}">
-                            <label for="date" class="col-md-4 control-label">Data</label>
-
-                            <div class="col-md-6">
-                                <input id="date" class="form-control" name="date" required>
-
-                                @if ($errors->has('date'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('date') }}</strong>
+                                        <strong>{{ $errors->first('text') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -137,3 +123,4 @@
         </div>
     </div>
 </div>
+

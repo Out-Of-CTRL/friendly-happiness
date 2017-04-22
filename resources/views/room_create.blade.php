@@ -41,7 +41,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->prenume }}<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="profil">Profilul meu</a></li>
+                                <li><a href="/profil">Profilul meu</a></li>
                                 <li><a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -60,7 +60,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">Creare sala</div>
 
                 <form class="form-horizontal" role="form" method="POST" action="{{ route('room.store') }}">
                         {{ csrf_field() }}

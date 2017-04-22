@@ -41,7 +41,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->prenume }}<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="profil">Profilul meu</a></li>
+                                <li><a href="/profil">Profilul meu</a></li>
                                 <li><a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -60,7 +60,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">Creare eveniment</div>
 
                 <form class="form-horizontal" role="form" method="POST" action="{{ route('event.store') }}">
                         {{ csrf_field() }}
@@ -79,21 +79,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('date') ? ' has-error' : '' }}">
-                            <label for="date" class="col-md-4 control-label">Date</label>
-
-                            <div class="col-md-6">
-                                <input id="date" class="form-control" name="date" required>
-
-                                @if ($errors->has('date'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('date') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                         <div class="form-group{{ $errors->has('hour') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('hour') ? ' has-error' : '' }}">
                             <label for="hour" class="col-md-4 control-label">Ora</label>
 
                             <div class="col-md-6">
@@ -102,6 +88,20 @@
                                 @if ($errors->has('hour'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('hour') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                         <div class="form-group{{ $errors->has('zi') ? ' has-error' : '' }}">
+                            <label for="zi" class="col-md-4 control-label">Zi</label>
+
+                            <div class="col-md-6">
+                                <input id="zi" class="form-control" name="zi" required>
+
+                                @if ($errors->has('zi'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('zi') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -135,29 +135,29 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
-                            <label for="title" class="col-md-4 control-label">Titlu</label>
+                        <div class="form-group{{ $errors->has('paritate') ? ' has-error' : '' }}">
+                            <label for="paritate" class="col-md-4 control-label">Paritate</label>
 
                             <div class="col-md-6">
-                                <input id="title" class="form-control" name="title" value="{{ old('title') }}" required autofocus>
+                                <input id="paritate" class="form-control" name="paritate" value="{{ old('paritate') }}" required autofocus>
 
-                                @if ($errors->has('title'))
+                                @if ($errors->has('paritate'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('title') }}</strong>
+                                        <strong>{{ $errors->first('paritate') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
-                            <label for="description" class="col-md-4 control-label">Descriere</label>
+                        <div class="form-group{{ $errors->has('grupa') ? ' has-error' : '' }}">
+                            <label for="grupa" class="col-md-4 control-label">Grupa</label>
 
                             <div class="col-md-6">
-                                <input id="description" class="form-control" name="description" value="{{ old('description') }}" required autofocus>
+                                <input id="grupa" class="form-control" name="grupa" value="{{ old('grupa') }}" required autofocus>
 
-                                @if ($errors->has('description'))
+                                @if ($errors->has('grupa'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('description') }}</strong>
+                                        <strong>{{ $errors->first('grupa') }}</strong>
                                     </span>
                                 @endif
                             </div>
