@@ -112,9 +112,10 @@ $azi = Carbon\Carbon::now()->format('Y-m-d');
             $today = getdate();
             $day = $today['wday'];
             ?>
+
             @if($ora->zi === $day)
                     <?php $counter = $counter + 1; ?>
-                    @foreach($events as $curs)
+                    @foreach($courses as $curs)
                         @if($curs->id === $ora->course_id)
                             <tr>
                                 <td>
@@ -122,11 +123,7 @@ $azi = Carbon\Carbon::now()->format('Y-m-d');
                                 </td>
 
                                 <td>
-                                    @foreach( $courses as $materie)
-                                        @if( $materie->id == $curs->course_id)
-                                            {{ $materie->materie }}
-                                        @endif
-                                    @endforeach
+                                    {{ $curs->materie }}
                                 </td>
 
                                 <td>
