@@ -1,11 +1,11 @@
-titluri
+titluri DONE
 favicon
-linkuri admin
-linkuri profil (la admin)
-scos linkuri student
-pus la admin doar ce trebuie ISH
-populat tabelele cu date calumea (important) DONE (fara note, more will come)
-facut formulare putintel mai functionale, nu cu mult :D DONE
-Reparat linkuri peste tot
+linkuri admin DONE
+linkuri profil (la admin) DONE
+scos linkuri student DONE
+pus la admin doar ce trebuie ISH -- DONE
+populat tabelele cu date calumea (important) DONE (fara note, more will come) DONE 99%
+facut formulare putintel mai functionale, nu cu mult :D DONE DONE
+Reparat linkuri peste tot DONE
 
 BOOTSTRAP si fonturi descarcate ca sa nu mai ia foc cu putin spre deloc internet

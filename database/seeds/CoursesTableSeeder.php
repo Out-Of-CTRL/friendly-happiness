@@ -43,6 +43,7 @@ class CoursesTableSeeder extends Seeder
         	'id' => '5',
         	'materie' => 'POO',
         	'user_id' => '6',
+            'nr_credite' => '5',
         	
         ]);
         DB::table('courses')->insert([

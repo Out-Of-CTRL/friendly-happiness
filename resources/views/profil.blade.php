@@ -475,54 +475,46 @@
 				<br>
 			  <thead class="black_theme">
 			    <tr>
-			      <th>An</th>
-			      <th>Semestru</th>
-			      <th>Puncte</th>
-			      <th>Credite</th>
+			      <th>Materie</th>
 			      <th>Medie</th>
+			      <th>Credite</th>
+			      <th>Puncte</th>
 			    </tr>
 			  </thead>
 			  <tbody>
+        @foreach ($courses as $materie)
 			    <tr>
-			      <td rowspan="2">I</td>
-			      <td>1</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			    </tr>
-			    <tr>
-			      <td>2</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			    </tr>
-			    <tr>
-			      <td rowspan="2">II</td>
-			      <td>1</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			    </tr>
-			    <tr>
-			      <td>2</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			    </tr>
-			    <tr>
-			      <td rowspan="2">III</td>
-			      <td>1</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			    </tr>
-			    <tr>
-			      <td>2</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
-			      <td>Column content</td>
+			      <td>{{$materie->materie}}</td>
+			      <td>
+           <?php
+          $suma='0';
+          $counter='0';
+          foreach($grades as $nota)
+          {
+            if ($nota->course_id == $materie->id)
+            {
+              $suma=$suma+$nota->val;
+              $counter++;
+            }
+          }
+          if($counter > 0)
+          $medie=$suma/$counter;
+          else
+          $medie='0';
+          echo $medie;
+           ?>
+          
+            </td>
+			      <td>{{$materie->nr_credite}}</td>
+			      <td>
+           <?php
+           $punctaj=$medie*$materie->nr_credite;
+           echo $punctaj;
+           ?>   
+            </td>
 			    </tr>
 			  </tbody>
+        @endforeach
 			</table> 
 		</div>
 	</div>
