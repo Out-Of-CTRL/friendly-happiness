@@ -20,8 +20,8 @@ class ModUserController extends Controller
      * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+	 **/
+    public function update($id) //Request $request, 
     {
         // Validate the request...
         // $this->validate($request, [

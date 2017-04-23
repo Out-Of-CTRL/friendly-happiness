@@ -3,6 +3,7 @@
 <head>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css">
+  <title> Profil </title>
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -31,11 +32,6 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li><a href="/orar">Orar <span class="sr-only">(current)</span></a></li>
-                        <li><a href="/group/create">Creare Grup</a></li>
-                        <li><a href="/course/create">Creare Curs</a></li>
-                        <li><a href="/room/create">Creare Sală</a></li>
-                        <li><a href="/grade/create">Introducere note</a></li>
-                        <li><a href="/event/create">Creare Eveniment</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
