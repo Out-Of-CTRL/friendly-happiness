@@ -39,7 +39,7 @@ Route::get('/admin', function () {
 	if (Auth::user()->id == 1)
     return view('admin');
 	else
-	return view('home',['events' => App\Event::all(),'courses' => App\Course::all(),'grades' => App\Grades::all(), 'rooms' => App\Room::all(), 'mods' => App\Mods::all()]);
+	return view('home',['events' => App\Event::all(),'courses' => App\Course::all(),'grades' => App\Grades::all(), 'rooms' => App\Room::all(), 'mods' => App\Mods::all(), 'news' => App\News::all()]);
 })->name('home');
 
 Route::resource('group', 'GroupController');
@@ -64,7 +64,7 @@ Route::get('home', function () {
 	if (Auth::user()->id == 1)
     return view('admin');
 	else
-    return view('home',['events' => App\Event::all(),'courses' => App\Course::all(),'grades' => App\Grades::all(), 'rooms' => App\Room::all(), 'mods' => App\Mods::all()]);
+    return view('home',['events' => App\Event::all(),'courses' => App\Course::all(),'grades' => App\Grades::all(), 'rooms' => App\Room::all(), 'mods' => App\Mods::all(), 'news' => App\News::all()]);
 })->name('home');
 
 

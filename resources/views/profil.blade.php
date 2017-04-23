@@ -149,11 +149,11 @@
       
       <!-- edit form column -->
       <div class="col-md-9 personal-info">
-        <div class="alert alert-info alert-dismissable">
+        <!--<div class="alert alert-info alert-dismissable">
           <a class="panel-close close" data-dismiss="alert">×</a> 
           <i class="fa fa-coffee"></i>
           This is an <strong>.alert</strong>. Use this to show important messages to the user.
-        </div>
+        </div>-->
         <h3>Personal info</h3>
         
 
@@ -479,6 +479,7 @@
 			      <th>Medie</th>
 			      <th>Credite</th>
 			      <th>Puncte</th>
+            <th>Restant</th>
 			    </tr>
 			  </thead>
 			  <tbody>
@@ -508,8 +509,16 @@
 			      <td>{{$materie->nr_credite}}</td>
 			      <td>
            <?php
-           $punctaj=$medie*$materie->nr_credite;
-           echo $punctaj;
+            $punctaj=$medie*$materie->nr_credite;
+            echo $punctaj;
+           ?>   
+            </td>
+            <td>
+           <?php
+            if($medie<4.5)
+             echo 'Restant';
+            else
+             echo 'Trecut';
            ?>   
             </td>
 			    </tr>

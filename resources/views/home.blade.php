@@ -187,18 +187,18 @@ $azi = Carbon\Carbon::now()->format('Y-m-d');
         </div>
     </div>
     <div class="row set_margin">
-        <div class="col-sm-6 " >
-                <img src="stagii.png" style="width: 100%" class="img-responsive margin">
+        @foreach ($news as $noutate)
+                <img src="{{$noutate->link_imagine}}" style="width: 100%" class="img-responsive margin">
                 <h2>
-                Stagii pe bune 2017 !
+                {{$noutate->titlu}}
                 </h2>
                 <blockquote>
-                  <p>Programul Stagii pe Bune propune plasarea studenţilor din facultăţile cu profil IT&C în stagii de practică, desfăşurate pe durata verii, în companiile din domeniul IT&C din România.<br>
-                    Fă-ți cont pe Junio și aplică la diferite stagii :
-                    <a href="https://junio.ro">https://junio.ro</a></p>
+                  {!! $noutate->text !!}
                 </blockquote>
+                @endforeach
         </div>
-        <div class="col-sm-6 ">
+
+       <!-- <div class="col-sm-6 ">
                 <h2>
                 FII Practic organizeaza Hackathon !
                 </h2>
@@ -226,7 +226,7 @@ $azi = Carbon\Carbon::now()->format('Y-m-d');
                     <a href="www.fiicode.com">www.fiicode.com</a></p>
                 </blockquote>
                 <img src="fiicode.jpeg" style="width: 100%" class="img-responsive margin">
-        </div>
+        </div>-->
     </div>
     </div>
 </div>
